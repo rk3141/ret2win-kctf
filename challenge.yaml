@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: ret2win-sample
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: false
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: kind/healthcheck:4c0fbc3bc652e3b8cef1b5e807eccdc9c905a7eaace4ae6813bd087f7a56258c
+  image: kind/challenge:a0423781cde295b2a2330d9a5026fe89361960e2c856e446398dcfc6a933c6ab
